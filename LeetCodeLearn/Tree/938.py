@@ -79,6 +79,9 @@ class Solution(object):
         """
         Deep First Search Iterative implementation. In Python we should chose iterative way
         instead recursive because of C stack limit. We couldn't call more than 1000 recursion in python.
+
+        Time Complexity: O(n)
+        Space Complexity: O(d), where d is max tree depth, in wars case O(d) ~ O(n)
         """
         res = 0
         stack = [root]
@@ -97,6 +100,9 @@ class Solution(object):
     def iterative_bfs(self, root, low, high):
         """
         Breadth Firs Search implementation.
+
+        Time Complexity: O(n)
+        Space Complexity: O(w), where w is max tree breadth, in worst case (full tree) O(w) ~ O(n)
         """
         res = 0
         queue = [root]
