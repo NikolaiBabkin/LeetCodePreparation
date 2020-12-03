@@ -1,5 +1,9 @@
 class Solution:
     def calculateTime(self, keyboard: str, word: str) -> int:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         k_dict = {letter: i for i, letter in enumerate(keyboard)}
         res, current_pos = 0, 0
         for letter in word:
