@@ -1,10 +1,10 @@
 class Solution:
     @staticmethod
-    def balancedStringSplit(self, s: str) -> int:
+    def balancedStringSplit(s: str) -> int:
 
         """
-        Time Complexity: O(len(res))
-        Space Complexity: O(len(res))
+        Time Complexity: O(n)
+        Space Complexity: O(1)
         """
         res = 0
         counter = 0
@@ -17,4 +17,7 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(f'Test 1: {s.decompressRLElist([1,2,3,4]) == [2,4,4,4]}')
+    print(f'Test 1: {s.balancedStringSplit("RLRRLLRLRL") == 4}')
+    print(f'Test 1: {s.balancedStringSplit("RLLLLRRRLR") == 3}')
+    print(f'Test 1: {s.balancedStringSplit("LLLLRRRR") == 1}')
+    print(f'Test 1: {s.balancedStringSplit("RLRRRLLRLL") == 2}')
