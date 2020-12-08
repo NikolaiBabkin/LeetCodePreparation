@@ -20,11 +20,12 @@ class Solution:
 
 
     @staticmethod
+    def decompressRLElist_2(nums):
+
         """
         Time Complexity: O(len(res))
         Space Complexity: O(len(res))
         """
-    def decompressRLElist_2(nums):
         return [x for a, b in zip(nums[0::2], nums[1::2]) for x in [b] * a]
 
 
