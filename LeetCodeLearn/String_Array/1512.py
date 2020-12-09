@@ -1,5 +1,9 @@
 class Solution:
     def numIdenticalPairs(self, nums):
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+        """
         def combination(n, k):
             a = 1
             for i in range(k + 1, n + 1):
