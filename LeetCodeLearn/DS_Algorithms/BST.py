@@ -58,6 +58,7 @@ class BST(object):
     def __str__(self):
         width = 4 * 2**self.max_depth - 3
         for i in range(self.max_depth + 1):
+            pass
 
 
 
