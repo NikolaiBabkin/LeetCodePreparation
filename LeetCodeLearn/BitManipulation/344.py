@@ -1,7 +1,8 @@
 class Solution:
     def reverseString(self, s) -> None:
         """
-        Do not return anything, modify s in-place instead.
+        Time Complexity: O(n)
+        Space Complexity: O(1)
         """
         for i in range(len(s) // 2):
             j = len(s) - i - 1
@@ -9,6 +10,10 @@ class Solution:
         return s
 
     def reverse_bitwise(self, s):
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         shift = 10
         for i in range(len(s)):
             s[i] = ord(s[i]) << shift

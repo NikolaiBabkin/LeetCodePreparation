@@ -1,7 +1,6 @@
 class Solution:
     @staticmethod
     def balancedStringSplit(s: str) -> int:
-
         """
         Time Complexity: O(n)
         Space Complexity: O(1)
