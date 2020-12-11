@@ -11,6 +11,7 @@ class Solution:
             n //= 10
         return dig_prod - dig_sum
 
+
 if __name__ == '__main__':
     s = Solution()
     print(s.subtractProductAndSum(1234))
