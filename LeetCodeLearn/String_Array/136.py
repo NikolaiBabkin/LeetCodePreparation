@@ -23,7 +23,7 @@ class Solution:
         """
         res = 0
         for i in nums:
-            res = res^i
+            res ^= i
         return res
 
 if __name__ == '__main__':
