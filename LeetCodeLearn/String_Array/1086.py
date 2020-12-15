@@ -1,5 +1,9 @@
 class Solution:
     def highFive(self, items):
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+        """
         def count_sort(arr, min_val, max_val):
             helper = [0] * (max_val - min_val + 1)
             for i in arr:
