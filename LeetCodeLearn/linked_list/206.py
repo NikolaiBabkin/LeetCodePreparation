@@ -23,6 +23,7 @@ class Solution:
             return prev
         return head
 
+
     def reverseList_recursive(self, head: ListNode) -> ListNode:
         """
         Recursive approach
