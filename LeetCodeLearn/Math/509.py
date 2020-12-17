@@ -1,4 +1,13 @@
 class Solution:
+    def fib_characteristic(self, n: int) -> int:
+        """
+        Time Complexity: O(1)
+        Space Complexity: O(1)
+        """
+        l1 = (1 + 5**0.5) / 2
+        l2 = (1 - 5 ** 0.5) / 2
+        return int((l1**n - l2**n) / 5**0.5)
+
     def fib(self, n: int) -> int:
         """
         Time Complexity: O(log(n))
@@ -35,4 +44,4 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.fib(5))
+    print(s.fib_characteristic(4))
