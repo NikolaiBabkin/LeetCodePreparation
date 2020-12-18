@@ -2,7 +2,7 @@ class Solution:
     def sortedSquares(self, nums):
         """
         Time Complexity: O(n)
-        Space Complexity: O(1)
+        Space Complexity: O(n)
         """
         res = [0] * len(nums)
         mid_point = 0
