@@ -46,14 +46,38 @@ class BST(object):
     def delete(self, val):
         return self._delete(self.root, val)
 
-    def _inorder(self, sub_root):
-        if sub_root:
-            self._inorder(sub_root.left)
-            print(sub_root.val)
-            self._inorder(sub_root.right)
-
     def inorder(self):
-        self._inorder(self.root)
+        def _inorder(node: BST):
+            if node:
+                _inorder(node.left)
+                res.append(node.val)
+                _inorder(node.right)
+
+        res = []
+        _inorder(self.root)
+        return res
+
+    def preorder(self):
+        def _preorder(node: BST):
+            if node:
+                res.append(node.val)
+                _preorder(node.left)
+                _preorder(node.right)
+
+        res = []
+        _preorder(self.root)
+        return res
+
+    def postorder(self):
+        def _postorder(node: BST):
+            if node:
+                _postorder(node.left)
+                _postorder(node.right)
+                res.append(node.val)
+
+        res = []
+        _postorder(self.root)
+        return res
 
     def __str__(self):
         width = 4 * 2**self.max_depth - 3
