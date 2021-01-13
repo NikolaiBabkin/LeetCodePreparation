@@ -24,9 +24,11 @@ class Morris(BST):
                 current = current.right
         return res
 
-    def preorder(self):
-        pass
+    # TODO: write preorder traversal function
+    # def preorder(self):
+    #     pass
 
-    def postorder(self):
-        pass
+    # TODO: write postorder traversal function
+    # def postorder(self):
+    #     pass
 

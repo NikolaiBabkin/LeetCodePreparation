@@ -50,6 +50,11 @@ class Solution:
         return res
 
     def sumRootToLeaf_morris(self, root: TreeNode) -> int:
+        """
+        Recursive DFS
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         res = number = 0
         current = root
         while current:
