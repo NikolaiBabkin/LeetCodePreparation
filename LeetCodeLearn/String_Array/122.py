@@ -1,5 +1,9 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         profit = 0
         in_position = 0
         buy_price = -1
