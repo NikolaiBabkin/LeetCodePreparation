@@ -10,7 +10,7 @@ class Solution:
         i = 0
         j = m-1
         while i < n:
-            while j >= 0 and grid[i][j] < 0:
+            while j >= 0 and 0 > grid[i][j]:
                 res += n - i
                 j -= 1
             i += 1
