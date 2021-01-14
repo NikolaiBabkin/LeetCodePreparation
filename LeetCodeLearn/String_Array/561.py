@@ -1,4 +1,4 @@
-from DS_Algorithms.Sorting.my_sort import MySort
+from DS_Algorithms.sorting.my_sort import MySort
 
 
 class Solution:
