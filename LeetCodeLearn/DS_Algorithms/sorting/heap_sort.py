@@ -1,4 +1,4 @@
-from DS_Algorithms.tree.heap import Heap
+from DS_Algorithms.tree.my_heap import Heap
 
 
 # TODO: implement Heap sort
