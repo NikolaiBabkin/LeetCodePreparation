@@ -80,3 +80,13 @@ def heappop(heap):
         return res
     else:
         raise IndexError('list is empty')
+
+
+def nlargest(n, heap, key=None):
+    # TODO: implement nlargest function
+    pass
+
+
+def nsmallest(n, iterable, key=None):
+    # TODO: implement nsmallest function
+    pass
