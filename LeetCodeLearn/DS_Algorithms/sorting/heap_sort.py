@@ -36,6 +36,7 @@ import random
 #     for i in reversed(range(n // 2)):
 #         _siftdown(arr, i)
 
+# TODO: make in-place heapsort
 
 def heap_sort(arr):
     my_heap.heapify(arr)
