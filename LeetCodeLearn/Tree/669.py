@@ -33,6 +33,5 @@ class Solution:
                     if node_left:
                         stack.append(node.left)
 
-
         return root
 

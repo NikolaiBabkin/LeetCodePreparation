@@ -5,6 +5,7 @@ Easy:   169. Majority Element
         1022. Sum of Root To Leaf Binary Numbers
 
 Medium: 1265. Print Immutable Linked List in Reverse
+        669. Trim a Binary Search Tree
 
 Hard:
 
@@ -14,6 +15,93 @@ Hard:
 class ProblemSolution(object):
     def __init__(self):
         pass
+
+
+class TrimBST(ProblemSolution):
+    """
+    669. Trim a Binary Search Tree
+    https://leetcode.com/problems/trim-a-binary-search-tree/
+
+    Given the root of a binary search tree and the lowest and highest boundaries as low and high,
+    trim the tree so that all its elements lies in [low, high].
+    Trimming the tree should not change the relative structure of the elements
+    that will remain in the tree (i.e., any node's descendant should remain a descendant).
+    It can be proven that there is a unique answer.
+    Return the root of the trimmed binary search tree.
+    Note that the root may change depending on the given bounds.
+
+    Example 1
+    Input:
+       1
+     /  \
+    0    2
+    low = 1, high = 2
+
+    Output:
+    1
+     \
+      2
+
+    Example 2
+    Input:
+       3
+      /  \
+     0    4
+      \
+       2
+      /
+    1
+    low = 1, high = 2
+
+    Output:
+        3
+       /
+      2
+     /
+    1
+
+    Constraints:
+
+    - The number of nodes in the tree in the range [1, 10E6].
+    - 0 <= Node.val <= 10E6
+    - The value of each node in the tree is unique.
+    - root is guaranteed to be a valid binary search tree.
+    - 0 <= low <= high <= 10E6
+
+    """
+    def __init__(self):
+        super().__init__()
+
+    def trim_bst(self, root, low, high):
+        def is_lies_in_boundaries(node):
+            return low <= node.val <= high
+
+        def find_next_node(node):
+            while node and not is_lies_in_boundaries(node):
+                if node.val < low:
+                    node = node.right
+                else:
+                    node = node.left
+            return node
+
+        root = find_next_node(root)
+        if root:
+            stack = [root]
+            while stack:
+                node = stack.pop(-1)
+                if node.right:
+                    node_right = find_next_node(node.right)
+                    node.right = node_right
+                    if node_right:
+                        stack.append(node.right)
+                if node.left:
+                    node_left = find_next_node(node.left)
+                    node.left = node_left
+                    if node_left:
+                        stack.append(node.left)
+
+        return root
+
 
 
 class MajorityElement(ProblemSolution):
