@@ -7,6 +7,10 @@ class ListNode:
 
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         if head is None:
             return head
         sentinel = ListNode(-1, head)
