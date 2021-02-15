@@ -21,6 +21,10 @@ class Solution:
         return sentinel.next
 
     def swapPairs_iterative(self, head: ListNode) -> ListNode:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         sentinel = ListNode(-1, head)
         prev = sentinel
         curr = head
