@@ -3,9 +3,17 @@ import heapq
 
 class Solution:
     def findKthLargest_heap(self, arr, k):
+        """
+        Time Complexity: O(n)<= T <= O(log(n))
+        Space Complexity: O(k)
+        """
         return heapq.nlargest(k, arr)[-1]
 
     def findKthLargest_recursion(self, arr, k):
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(log(n))
+        """
         def kth_statistic(lo, hi, k):
             if lo == hi:
                 return arr[lo]
@@ -39,6 +47,10 @@ class Solution:
         return kth_statistic(0, len(arr) - 1, k)
 
     def findKthLargest_iterative(self, arr, k):
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         def partition(lo, hi):
             mid = (lo + hi) // 2
             if arr[lo] > arr[hi]:
