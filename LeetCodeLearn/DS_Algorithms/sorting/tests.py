@@ -5,6 +5,7 @@ from DS_Algorithms.sorting.my_sort import MySort
 from DS_Algorithms.sorting.merge_sort import merge_sort
 from DS_Algorithms.sorting.quick_sort import quicksort_iterative, quicksort_recursion
 from DS_Algorithms.quick_select import quick_select_iterative, quick_select_recursion
+from DS_Algorithms.median_of_median import median_of_median
 
 
 class MySortTest(unittest.TestCase):
@@ -39,6 +40,12 @@ class MySortTest(unittest.TestCase):
             arr = [random.randint(1, 1000) for _ in range(1000)]
             k = random.randint(1, 1000)
             self.assertEqual(quick_select_iterative(arr, k), heapq.nsmallest(k, arr)[-1])
+
+    def test_median_of_median(self):
+        for _ in range(10):
+            arr = [random.randint(1, 1000) for _ in range(1000)]
+            k = random.randint(1, 1000)
+            self.assertEqual(median_of_median(arr, k), heapq.nsmallest(k, arr)[-1])
 
     def test_heap_sort(self):
         pass

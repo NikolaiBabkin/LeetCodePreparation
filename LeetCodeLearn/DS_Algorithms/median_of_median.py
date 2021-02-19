@@ -40,16 +40,12 @@ def median_of_median(arr, k):
         arr[i], arr[hi] = arr[hi], arr[i]
         return i
 
-    k = len(arr) - k + 1
     k_idx = kth_statistic(0, len(arr) - 1, k)
-
     return arr[k_idx]
 
 
 if __name__ == '__main__':
-    # arr = [random.randint(1, 1000) for _ in range(5000)]
-    # k = random.randint(1, 5000)
-    arr = [3, 2, 3, 1, 2, 4, 5, 5, 6, 7, 7, 8, 2, 3, 1, 1, 1, 10, 11, 5, 6, 2, 4, 7, 8, 5, 6]
-    k = 20
+    arr = [random.randint(1, 1000) for _ in range(5000)]
+    k = random.randint(1, 1000)
     print(median_of_median(arr, k))
-    print(heapq.nlargest(k, arr)[-1])
+    print(heapq.nsmallest(k, arr)[-1])
