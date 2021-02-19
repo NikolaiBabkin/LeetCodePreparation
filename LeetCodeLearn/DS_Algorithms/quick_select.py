@@ -1,12 +1,3 @@
-# import heapq
-#
-# def findKthLargest_heap(self, arr, k):
-#     """
-#     Time Complexity: O(n)
-#     Space Complexity: O(1)
-#     """
-#     return heapq.nlargest(k, arr)[-1]
-
 def quick_select_recursion(arr, k):
     """
     Time Complexity: O(n)
