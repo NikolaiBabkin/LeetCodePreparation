@@ -26,7 +26,7 @@ class Solution:
                 return True
             if under_attack[1][row - col]:
                 return True
-            if under_attack[2][n - 1 - row - col]:
+            if under_attack[2][row + col]:
                 return True
             return False
 
@@ -34,7 +34,7 @@ class Solution:
             new_val = 1 if back == False else 0
             under_attack[0][col] = new_val
             under_attack[1][row - col] = new_val
-            under_attack[2][n - 1 - row - col] = new_val
+            under_attack[2][row + col] = new_val
 
         under_attack = [[0] * n, [0] * (2 * n - 1), [0] * (2 * n - 1)]
         res = []
