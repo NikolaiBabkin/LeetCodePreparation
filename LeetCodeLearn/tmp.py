@@ -1,20 +1,15 @@
-def f(arr, target):
-    def recursion_cal(arr, target):
-        res = []
-        while arr and arr[-1] >= target:
-            if arr[-1] == target:
-                res.append([arr.pop()])
-            else:
-                arr.pop()
-        if arr:
-            for l in recursion_cal(arr[:-1], target - arr[-1]):
-                res.append(l + [arr[-1]])
-        return res
+def f(arr):
+    if len(arr) == 10:
+        return True
 
-    arr = sorted(arr)
-    return recursion_cal(arr, target)
+    arr.append(1)
+    f(arr)
+    if f(arr):
+        return True
+    arr.pop()
+
 
 if __name__ == '__main__':
-    arr = [1, 2, 3, 3, 6]
-    target = 6
-    print(f(arr, target))
+    arr = []
+    print(f(arr))
+    print(arr)
