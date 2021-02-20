@@ -35,6 +35,8 @@ class Solution:
         """
         :type robot: Robot
         :rtype: None
+        Time Complexity: O(n - m)
+        Space Complexity: O(n - m)
         """
         self.dfs(robot, 0, 0, 0, 1, set())
 
@@ -56,6 +58,10 @@ class Solution:
             direction_x, direction_y = -direction_y, direction_x
 
     def cleanRoom_2(self, robot):
+        """
+        Time Complexity: O(n - m)
+        Space Complexity: O(n - m)
+        """
         def backtrack():
             robot.clean()
             visited.add((pos[1][0] - pos[1][2], pos[1][1] - pos[1][3]))
