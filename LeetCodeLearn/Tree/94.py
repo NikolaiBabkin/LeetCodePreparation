@@ -6,6 +6,10 @@ class TreeNode:
 
 class Solution:
     def inorderTraversal_iterative(self, root: TreeNode) -> List[int]:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+        """
         res = []
         node = root
         stack = []
@@ -20,6 +24,10 @@ class Solution:
         return res
 
     def inorderTraversal_morris(self, root: TreeNode) -> List[int]:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         res = []
         node = root
         while node:
@@ -41,6 +49,10 @@ class Solution:
         return res
 
     def inorderTraversal_recursion(self, root: TreeNode) -> List[int]:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+        """
         def inorder(node):
             if node:
                 inorder(node.left)
