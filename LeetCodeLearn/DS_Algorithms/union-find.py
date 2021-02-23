@@ -42,10 +42,11 @@ class QuickUnionFind:
         return self._find(p) == self._find(q)
 
     def n_components(self):
-        components = set()
-        for i in self.roots:
-            components.add(self._find(i))
-        return len(components)
+        components = 0
+        for idx, node in enumerate(self.roots):
+            if idx == node:
+                components += 1
+        return components
 
 
 def test(grid):
