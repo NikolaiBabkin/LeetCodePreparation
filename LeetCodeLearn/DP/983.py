@@ -10,11 +10,9 @@ class Solution:
                 return 0
 
             p = cost_calc(k + 1) + costs[0]
-
             l = 0
             while k + l < len(days) and days[k + l] - days[k] < 7:
                 l += 1
-
             p = min(p, cost_calc(k + l) + costs[1])
 
             l = 0
