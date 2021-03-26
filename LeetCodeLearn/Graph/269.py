@@ -1,6 +1,7 @@
 class Solution:
     def alienOrder(self, words: List[str]) -> str:
         if len(words) == 1:
+            a = list()
             return words[0]
 
         adj_list = [[set(), 0, False] for _ in range(26)]
