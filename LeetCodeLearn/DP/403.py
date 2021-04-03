@@ -1,4 +1,22 @@
 class Solution:
+    def canCross_fast(self, stones: List[int]) -> bool:
+        """
+        Time Complexity: O(n^2)
+        Space Complexity: O(n^2)
+        """
+        stones_map = dict()
+        for stone in stones:
+            stones_map[stone] = set()
+        stones_map[stones[0]].add(0)
+        for stone in stones:
+            for k in stones_map[stone]:
+                for i in range(-1, 2, 1):
+                    if (k + i) > 0 and (stone + (k + i)) in stones_map:
+                        stones_map[stone + (k + i)].add(k + i)
+
+        return len(stones_map[stones[-1]]) > 0
+
+
     def canCross(self, stones: List[int]) -> bool:
         @lru_cache(None)
         def dp(n, k):
