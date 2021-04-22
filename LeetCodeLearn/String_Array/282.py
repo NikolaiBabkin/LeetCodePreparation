@@ -18,7 +18,6 @@ class Solution:
                 curr.pop()
             curr.pop()
 
-
         res = []
         curr = []
         backtracking(0)
